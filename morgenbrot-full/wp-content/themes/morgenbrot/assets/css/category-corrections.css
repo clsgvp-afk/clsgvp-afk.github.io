@@ -1,0 +1,12 @@
+.category-grid a:not(:nth-child(4)) .category-icon svg{display:none}
+.category-grid a:not(:nth-child(4)) .category-icon::before{content:"";display:block;width:36px;height:36px;background:center/contain no-repeat}
+.category-grid a:nth-child(1) .category-icon::before{background-image:url("../images/category-icons/bread.png")}
+.category-grid a:nth-child(2) .category-icon::before{background-image:url("../images/category-icons/rolls.png")}
+.category-grid a:nth-child(3) .category-icon::before{background-image:url("../images/category-icons/pastry.png")}
+.category-grid a:nth-child(5) .category-icon::before{background-image:url("../images/category-icons/cake.png")}
+.category-grid a:nth-child(6) .category-icon::before{background-image:url("../images/category-icons/snacks.png")}
+.category-grid .category-icon{width:60px!important;height:60px!important}
+.category-grid .category-icon svg,.category-grid a:not(:nth-child(4)) .category-icon::before{width:54px!important;height:54px!important}
+.category-grid a:nth-child(4) .category-icon svg{width:36px!important;height:36px!important}
+.category-grid a:nth-child(5) .category-icon::before{width:44px!important;height:44px!important}
+.category-grid a:nth-child(6) .category-icon::before{width:72px!important;height:72px!important}

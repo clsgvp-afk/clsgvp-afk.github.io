@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Interaktive Technical-Support- und QA-Arbeitsprobe von Oleksandr Lezhnov.">
+  <title>SupportLab — UI-Übung · Oleksandr Lezhnov</title>
+  <link rel="stylesheet" href="/support-lab/style.css">
+  <script src="/support-lab/script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">OL<span>/</span>SupportLab</a>
+    <div class="system-status">UI-Übung · keine echten Tickets</div>
+    <a class="back" href="/">Portfolio ↗</a>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div>
+        <p class="eyebrow">Ergänzende UI-Übung · HTML, CSS, JavaScript</p>
+        <h1>Vom Problem zur<br><em>nachvollziehbaren Lösung.</em></h1>
+      </div>
+      <p class="intro-copy">Eine lokale Oberflächen-Übung mit drei vorgegebenen Beispieltickets: Checkliste abhaken, Notiz schreiben, Ticket als gelöst markieren. Es gibt kein Backend, keine echten Anfragen und keine Kundendaten.</p>
+    </section>
+
+    <section class="workspace" aria-label="Support-Dashboard">
+      <aside class="ticket-list">
+        <div class="panel-head"><div><span>Inbox</span><strong>3 offene Tickets</strong></div><button id="reset" type="button">Zurücksetzen</button></div>
+        <button class="ticket active" data-ticket="login" type="button"><span class="priority high">Hoch</span><strong>Login nach Passwortwechsel nicht möglich</strong><small>#1042 · vor 8 Min.</small></button>
+        <button class="ticket" data-ticket="upload" type="button"><span class="priority medium">Mittel</span><strong>PDF-Upload bleibt bei 0 % stehen</strong><small>#1038 · vor 24 Min.</small></button>
+        <button class="ticket" data-ticket="mobile" type="button"><span class="priority low">Niedrig</span><strong>Navigation überdeckt Inhalt mobil</strong><small>#1029 · vor 1 Std.</small></button>
+      </aside>
+
+      <section class="ticket-detail">
+        <div class="detail-head">
+          <div><p id="ticket-id">Ticket #1042</p><h2 id="ticket-title">Login nach Passwortwechsel nicht möglich</h2></div>
+          <span class="state" id="ticket-state">In Analyse</span>
+        </div>
+        <div class="customer-note"><span>KM</span><p id="ticket-message">„Nach dem Zurücksetzen meines Passworts werde ich immer wieder zur Login-Seite zurückgeleitet.“</p></div>
+
+        <div class="diagnosis">
+          <div class="diagnosis-head"><h3>Diagnose-Checkliste</h3><span id="progress-label">0 / 4 geprüft</span></div>
+          <div class="progress"><i id="progress-bar"></i></div>
+          <div id="checklist" class="checklist"></div>
+        </div>
+
+        <div class="resolution">
+          <label for="resolution-text">Interne Lösungsnotiz</label>
+          <textarea id="resolution-text" rows="4"></textarea>
+          <div class="resolution-actions"><span>Dokumentation bleibt in dieser lokalen Demo.</span><button id="resolve" type="button" disabled>Als gelöst markieren</button></div>
+        </div>
+      </section>
+
+      <aside class="knowledge">
+        <p class="eyebrow">Knowledge Base</p>
+        <h2>Schnelle Hilfe</h2>
+        <label class="search"><span>⌕</span><input id="search" type="search" placeholder="Artikel durchsuchen"></label>
+        <div id="articles"></div>
+        <div class="qa-card"><span>QA Standard</span><strong>Reproduzieren → Eingrenzen → Dokumentieren → Verifizieren</strong></div>
+      </aside>
+    </section>
+
+    <section class="evidence">
+      <p class="eyebrow">Was diese Übung zeigt – und was nicht</p>
+      <div class="evidence-grid">
+        <article><span>01</span><h3>Oberfläche</h3><p>Dreispaltiges Layout, Zustände (offen, in Analyse, gelöst) und Zurücksetzen – umgesetzt mit HTML, CSS und JavaScript ohne Framework.</p></article>
+        <article><span>02</span><h3>Grenzen</h3><p>Tickets, Diagnose-Schritte und Hilfeartikel sind vorgegeben. Die Übung ist kein Nachweis von Erfahrung im Kundensupport.</p></article>
+        <article><span>03</span><h3>Echter Prüfnachweis</h3><p>Reproduzierte Fehler, Korrekturen und Regressionstests aus den WordPress-Projekten stehen im <a href="/qa-bericht/">Prüfbericht</a>.</p></article>
+      </div>
+    </section>
+  </main>
+  <footer><span>Konzept, UI und Entwicklung: Oleksandr Lezhnov</span><span>HTML · CSS · JavaScript</span></footer>
+</body>
+</html>
